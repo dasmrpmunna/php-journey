@@ -71,27 +71,108 @@
     // (object) - Converts to data type Object
     // (unset) - Deprecated. Converts to data type NULL
 
-    $a = 5;
-    $b = 54.434;
-    $c = "Aryan Shrivastava";
-    $d = true;
-    $e = Null;
+    $a = 25;                    //Integer
+    $b = 54.434;              //Float
+    $c = "Aryan Shrivastava";//String
+    $d = true;              //Boolean
+    $e = Null;             //Null
 
+    echo $a, "<br>", $b, "<br>", $c, "<br>", $d, "<br>", $e;
+
+    echo "<h2> Cast to String </h2>";
     $a = (string) $a;
     $b = (string) $b;
     $c = (string) $c;
     $d = (string) $d;
     $e = (string) $e;
 
-    var_dump($a); echo "<br>";
+    var_dump($a);echo "<br>";
+    var_dump($b);echo "<br>";
+    var_dump($c);echo "<br>";
+    var_dump($d);echo "<br>";
+    var_dump($e);echo "<br>";
+
+    echo "<h2> Cast to Float </h2>";
+    $a = (float) $a;
+    $b = (float) $b;
+    $c = (float) $c;
+    $d = (float) $d;
+    $e = (float) $e;
+
+    var_dump($a);echo "<br>";
     var_dump($b);echo "<br>";
     var_dump($c);echo "<br>";
     var_dump($d);echo "<br>";
     var_dump($e);echo "<br>";
 
 
+    echo "<h2> Cast to Integer </h2>";
+    $a = (int) $a;
+    $b = (int) $b;
+    $c = (int) $c;
+    $d = (int) $d;
+    $e = (int) $e;
+
+    var_dump($a);echo "<br>";
+    var_dump($b);echo "<br>";
+    var_dump($c);echo "<br>";
+    var_dump($d);echo "<br>";
+    var_dump($e);echo "<br>";
 
 
+    // echo "<h2> Cast to Boolean </h2>";
+    // $a = (bool) $a;
+    // $b = (bool) $b;
+    // $c = (bool) $c;
+    // $d = (bool) $d;
+    // $e = (bool) $e;
+
+    // var_dump($a);echo "<br>";
+    // var_dump($b);echo "<br>";
+    // var_dump($c);echo "<br>";
+    // var_dump($d);echo "<br>";
+    // var_dump($e);echo "<br>";
+
+    echo "<h2> Cast to Array </h2>";
+    $a = (array) $a;
+    $b = (array) $b;
+    $c = (array) $c;
+    $d = (array) $d;
+    $e = (array) $e;
+
+    var_dump($a);echo "<br>";
+    var_dump($b);echo "<br>";
+    var_dump($c);echo "<br>";
+    var_dump($d);echo "<br>";
+    var_dump($e);echo "<br>";
+
+
+    echo "<h2> convert Object into Array </h2>";
+    class Car{
+        public $color;
+        public $model;
+        
+        public function __construct($color, $model){
+            $this->color = $color;
+            $this->model = $model;
+        }
+        public function message(){
+            return "My car is a " . $this->color . " " . $this->model . "!";
+        }
+    }
+    $myCar = new Car("red", "volvo");
+    $myCar = (array) $myCar;
+    var_dump($myCar);
+
+    echo "<h2> convert Array into Object </h2>";
+    $x = array("Volvo", "BMW", "Toyota");
+    $y = array("Ben"=>"24", "Peter"=>"25", "Aryan"=>"21");
+
+    $x = (object) $x;
+    $y = (object) $y;
+
+    var_dump($x); echo "<br>";
+    var_dump($y);
 
     
     /* */
