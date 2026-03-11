@@ -25,7 +25,11 @@
     echo $y;
     */
 
+
+    /*
     echo "<br>";
+    echo "<h2> PHP Number<h2>";
+    // echo "<br>";
     $a = 34534;
     $b = 32.232;
     $c = 5.2e412;
@@ -55,13 +59,43 @@
     var_dump(is_infinite($b));
     echo "<br>";
     var_dump(is_infinite($c));
+    */
+
+    echo "<h2> PHP Type Casting </h2>";
+    #The PHP casting operators are:
+    //(string) - Converts to data type String
+    // (int) - Converts to data type Integer
+    // (float) - Converts to data type Float
+    // (bool) - Converts to data type Boolean
+    // (array) - Converts to data type Array
+    // (object) - Converts to data type Object
+    // (unset) - Deprecated. Converts to data type NULL
+
+    $a = 5;
+    $b = 54.434;
+    $c = "Aryan Shrivastava";
+    $d = true;
+    $e = Null;
+
+    $a = (string) $a;
+    $b = (string) $b;
+    $c = (string) $c;
+    $d = (string) $d;
+    $e = (string) $e;
+
+    var_dump($a); echo "<br>";
+    var_dump($b);echo "<br>";
+    var_dump($c);echo "<br>";
+    var_dump($d);echo "<br>";
+    var_dump($e);echo "<br>";
+
 
 
 
 
     
-    
+    /* */
     ?>
-    
+   
 </body>
 </html>
