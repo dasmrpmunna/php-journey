@@ -196,6 +196,37 @@ The conditional operators are used to set a value depending on conditions (short
     print_r($x + $y);  // it print real value.
     # echo($x + $y); //it print data type (Array)
     
+    echo "<br>";echo "<br>";
+
+    $x = array("a" => "red", "b" => "green");  
+    $y = array("c" => "blue", "d" => "yellow");  
+    var_dump($x == $y);
+
+    echo "<br>";echo "<br>";
+
+    $x = array("a" => "red", "b" => "green");  
+    $y = array("c" => "blue", "d" => "yellow");  
+    var_dump($x === $y);
+
+    echo "<br>";echo "<br>";
+
+    $x = array("a" => "red", "b" => "green");  
+    $y = array("c" => "blue", "d" => "yellow");  
+    var_dump($x != $y);
+
+    echo "<br>";echo "<br>";
+
+    $x = array("a" => "red", "b" => "green");  
+    $y = array("c" => "blue", "d" => "yellow");  
+    var_dump($x <> $y);
+
+    echo "<br>";echo "<br>";
+
+    $x = array("a" => "red", "b" => "green");  
+    $y = array("c" => "blue", "d" => "yellow");  
+    var_dump($x !== $y);
+
+
 
     ?>
 </body>
