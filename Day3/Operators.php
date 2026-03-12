@@ -81,6 +81,43 @@ xor	    Xor	    $x xor $y	    True if either $x or $y is true, but not both	<br>
 ||	    Or	    $x || $y	    True if either $x or $y is true	<br><br> 
 !	    Not	    !$x	            True if $x is not true <br><br> 
 
+
+<h2>PHP String Operators</h2>
+
+The string operators are used to concatenate strings.
+
+<h3>Operator	||      Name	            ||      Example	Result	</h3>
+.	             Concatenation	                $txt1 . $txt2	Concatenation of $txt1 and $txt2	<br><br>
+.=	            Concatenation assignment	    $txt1 .= $txt2	Appends $txt2 to $txt1 <br><br>
+
+
+<h2>PHP Array Operators</h2>
+
+The array operators are used to compare arrays.
+
+<h3>Operator	||      Name    ||   Example   ||        Result </h3>
++	               Union	         $x + $y	    Union of $x and $y	<br><br>
+==	               Equality	         $x == $y	    Returns true if $x and $y have the same key/value pairs	<br><br>
+===	               Identity	         $x === $y	    Returns true if $x and $y have the same key/value pairs in the same order and of the same types	<br><br>
+!=	               Inequality	     $x != $y	    Returns true if $x is not equal to $y	<br><br>
+<>	               Inequality	     $x <> $y	    Returns true if $x is not equal to $y	<br><br>
+!==	               Non-identity	     $x !== $y	    Returns true if $x is not identical to $y<br><br>
+
+
+
+<h2>PHP Conditional Operators</h2>
+
+The conditional operators are used to set a value depending on conditions (shorthand for if...else):
+
+<h3>Operator ||	Name	||    Example	               ||         Result	</h3>
+?:	        Ternary	    $x = expr1 ? expr2 : expr3	        Returns the value of $x.<br>
+        The value of $x is expr2 if expr1 = TRUE.<br>
+        The value of $x is expr3 if expr1 = FALSE	<br><br>
+??	        Null        coalescing	$x = expr1 ?? expr2	    Returns the value of $x.<br>
+        The value of $x is expr1 if expr1 exists, and is not NULL.<br>
+        If expr1 does not exist, or is NULL, the value of $x is expr2.<br>
+        Introduced in PHP 7 <br><br>
+
 </p>
 
     <?php
@@ -111,7 +148,9 @@ xor	    Xor	    $x xor $y	    True if either $x or $y is true, but not both	<br>
     echo "<h3>Example of Post-increment</h3>";
     $a = 15;
     echo $a++;  // 10 become 10 due to Post-increment {Returns $x, then increments $x by one}
-    
+    echo "<br>";
+    echo $a; // it print increment value 
+
     echo "<h3>Example of Post-decrement</h3>";
     $b = 10;
     echo --$b;  // 10 become 9 due to pre-increment {Decrements $x by one, then returns $x}
@@ -124,12 +163,39 @@ xor	    Xor	    $x xor $y	    True if either $x or $y is true, but not both	<br>
     $x = 100; $y = 100;
     echo "Write a message when both condition is True:";echo "<br>";
     if ($x == 100 and $y == 100){
-        echo "yes it is Right";
+        echo "Yes, The above condition is match";
     }
-    echo "<br>";
+    echo "<br>";echo "<br>";
     
-    if ($a = 100 and $b = 200);
-        echo "Write a message if condition is True";
+    $a = 100; $b = 200;
+    echo "Write a message atleast one condition is True";echo "<br>";
+    if ($a == 100 or $b == 300){
+        echo"Yes, Atleast one condition is match";
+    }
+    echo "<br>";echo "<br>";
+    
+
+
+    echo "<h2>PHP String Operators</h2>"; // (.)operation is help to add two or more string in a string.
+    echo "<h3>Example of String Concatenation</h3>";
+    $str1 = "Aryan ";
+    $str2 = "Shrivastava";
+    echo $str1 . $str2;   // normally (.) operation add both string.
+
+    echo "<h3>Example of String Concatenation assignment</h3>";
+    $str1 = "Aryan ";
+    $str2 = "Shrivastava";
+    $str1 .= $str2;     // normally, (.=)operation is help to put the str2 value into str1. 
+    echo $str1;
+
+
+
+    echo "<h2>PHP Array Operators</h2>";
+    $x = array("a" => "BMW", "b" => "Jeep ");
+    $y = array("c" => "Toyato", "d" => "Valvo");
+    print_r($x + $y);  // it print real value.
+    # echo($x + $y); //it print data type (Array)
+    
 
     ?>
 </body>
