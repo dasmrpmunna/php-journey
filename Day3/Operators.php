@@ -227,6 +227,15 @@ The conditional operators are used to set a value depending on conditions (short
     var_dump($x !== $y);
 
 
+    echo "<h2>PHP Conditional Operators</h2>";
+
+    // if empty($user) = TRUE, set $status = "anonymous"
+    echo $status = (empty($user)) ? "anonymous" : "logged in";
+    echo("<br>");
+
+    $user = "John Doe";
+    // if empty($user) = FALSE, set $status = "logged in"
+    echo $status = (empty($user)) ? "anonymous" : "logged in";
 
     ?>
 </body>
