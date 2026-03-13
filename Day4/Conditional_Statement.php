@@ -106,7 +106,32 @@
     ##########################################################################
     
     echo"<h2> PHP Nested if Statements </h2>";
+    // You can have if statements inside if statements, this is called nested if statements.
 
+    $w = 15;
+    if ($w > 10 ){
+        echo "Above 10";
+        if ($w > 20){
+            echo "and also above 20";
+        }
+        else{
+            echo " but below 20";
+        }
+    }
+
+    echo"<br>"; echo"<br>";
+
+    //Another example;
+    $p = 5;
+    if ($p > 3){
+        echo " $p is above 3 ";
+        if ($p < 10){
+            echo " but $p is below 10 ";
+        }
+        else{
+            echo "$p is also above 10";
+        }
+    }
 
     ?>
 </body>
