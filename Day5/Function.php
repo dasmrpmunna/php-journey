@@ -66,16 +66,33 @@
 
     </p>
     <?php 
-    echo "<h2> Example </h2>";
+    echo "<hr/>";
+    echo "<h2 style = 'color:red'> Example </h2>";
 
     function myMessage(){
         echo "Hey!, How are you..?";
+        echo "<hr/>";
     }
     myMessage();
 
-    echo "<br>";echo "<br>";
     ##############################################################
-    echo "<h3>PHP Function Parameters </h3>";
+    
+    // another examle
+    function myDetail(){
+        echo "<h3>My Details </h3>";
+    }
+    function userDetail(){
+        myDetail();
+        echo "My name is Aryan  <br>";
+        echo "I am from Nepal";
+        echo "i'm in my Final Year";
+        echo "<hr/>";
+    }
+    userDetail();
+    userDetail();
+
+    ##############################################################
+    echo "<h3 style = 'color:green'>PHP Function Parameters </h3>";
 
     function familyName($fname){
         echo"$fname Das <br>";
@@ -85,7 +102,20 @@
     familyName("Ayush");
     familyname("Ishika");
 
-    echo "<br>";echo "<br>";
+    echo "<hr/>";
+    echo "<h3 style='color:Black'> Another Dynamic Parameter Example </h3>"; 
+
+    function myColor($name, $color){
+        echo "<h4 style='color:$color'> My name is $name";
+    }
+    myColor("Munna Das", "red");
+    myColor("Aryan Shrivastava", "yellow");
+    myColor("Ben Tennyson","green");
+    myColor("Wins", "pink");
+
+
+
+   echo "<hr/>";
     ##############################################################
     echo "<h4> The following example has a function with two parameters ($fname, $year):</h4>";
 
@@ -96,23 +126,30 @@
     FamilymName("Raju", "1999");
     FamilymName("Ayush", "2020");
     FamilymName("Ishika", "2018");
-
-    echo "<br>";echo "<br>";
+    echo "<hr/>";
     ##############################################################
-    echo "<h3>PHP Default Parameter Value </h3>";
+    echo "<h3 style = 'color:green'>PHP Default Parameter Value </h3>";
     echo "<h4> The following example shows how to use a default parameter. ($fname, $year):</h4>";
     echo "<p>If we call the function setHeight() without a parameter, it will take the default value: <p>";
     echo "<h3> Example</h3>";
 
-    function setHeight($height = 50){
+    function setHeight($height = 50){       // 50 is the default value, when you forget to put height then it take default value automatically.
         echo "The height is : $height <br>";
     }
     setHeight(350);
     setHeight();  //will take the default value of 50;
 
-    echo "<br>";echo "<br>";
+    echo "<hr/>";
+    echo "<h4 style ='color:blue'> Another Example <h4>";
+
+    function Furits($name, $color = "green"){   // this color = green is default value, when you don't want to call color name then it automatically take default color/value "red";
+        echo "This is $name and it's color is $color";
+    }
+    Furits("apple", "red");
+
+    echo "<hr/>";
     ##############################################################
-    echo "<h3>PHP Functions - Returning values </h3>";
+    echo "<h3 style = 'color:green'>PHP Functions - Returning values </h3>";
     echo "<h4> The return statement immediately ends the execution of a function, and returns a value back to the line of code that called it:</h4>";
 
     function sum($x, $y){
@@ -123,14 +160,51 @@
     echo "2 + 5 = " . sum(2, 5) . "<br>";
     echo "30 +35 = " . sum(30, 35) . "<br>";
 
+    echo "<hr>";
+    echo "<h4 style ='color:blue'> Another Example <h4>";
+    function userName(){
+        return "Munna Das";
+    }
+    echo "The current user is " . userName() ."..!";
 
-    echo "<br>";echo "<br>";
+
+    echo "<hr/>"; 
     ##############################################################
-    echo "<h3>Passing Arguments by Reference </h3>";
-    echo "<h5> Arguments are usually passed by value, which means that a copy of the value is used in the function and the variable that was passed into the function cannot be changed.</h5>";
-    echo "<h5> When a function argument is passed by reference, changes to the argument also change the variable that was passed in. To turn a function argument into a reference, use the & operator in front of the argument/parameter:
+    
+    echo "<h3 style = 'color:green'>Nasted Function </h3>";
+    echo "<h5> Function within a Function is known as Nested function</h5>";
 
-</h5>";
+    function Fun1(){
+        echo "Testing Fun1 function <br>";
+
+        function Fun2(){
+            echo "Testing Fun2 Function";
+        }
+    }
+    Fun1();
+    Fun2();
+
+    // When i call first Fun2 function then it show error because of nested.
+    // Everytime first call "Parent Function" then call "children function".
+    echo "<br/>";echo "<br/>";
+    echo "*******************************************************<br>";
+
+    function Furit($name, $color){
+        echo "This is the $name and it's color is $color..! <br>";
+
+        function Vegetable($name1, $color1){
+            echo "This is a $name1 and it's color is $color1..!";
+        }
+    }
+    Furit("apple","red");
+    Vegetable("carrot", "orange");
+
+
+    echo "<hr/>";
+    ##############################################################
+    echo "<h3 style = 'color:green'>Passing Arguments by Reference </h3>";
+    echo "<h5> Arguments are usually passed by value, which means that a copy of the value is used in the function and the variable that was passed into the function cannot be changed.</h5>";
+    echo "<h5> When a function argument is passed by reference, changes to the argument also change the variable that was passed in. To turn a function argument into a reference, use the & operator in front of the argument/parameter:</h5>";
 
 
     
