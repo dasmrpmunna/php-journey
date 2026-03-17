@@ -51,6 +51,7 @@
     while ($i < 10);
     
     echo "<br>";echo "<br>";
+    ##############################################################
     echo "<h2> The PHP continue Statement </h3>";
     echo "<h5> With the continue statement we can skip the current iteration, and continue with the next:</h5>";
 
