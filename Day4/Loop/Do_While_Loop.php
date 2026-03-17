@@ -40,7 +40,27 @@
     ##############################################################
 
     echo "<h2> break statement </h3>";
+    echo "<h5> With the break statement we can stop the loop even if the condition is still true:</h5>";
 
+    $i = 0;
+    do {
+        if ( $i == 5)break;
+        echo $i. " ";
+        $i++;
+    }
+    while ($i < 10);
+    
+    echo "<br>";echo "<br>";
+    echo "<h2> The PHP continue Statement </h3>";
+    echo "<h5> With the continue statement we can skip the current iteration, and continue with the next:</h5>";
+
+    $i = 0; 
+    do{
+        $i++;
+        if ($i == 5) continue;
+        echo $i . " ";
+    }
+    while ($i < 10);
 
     ?>
     
