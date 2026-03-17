@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    echo "<h2> The PHP for Loop </h3>";
+    echo "<h3> The PHP for Loop </h3>";
     echo "<h5> The PHP for loop - Loops through a block of code a specified number of times.</h5>";
     echo "<h5> The for loop is used when you know how many times the script should run.</h5>";
     echo "<h3> Syntax <h3>";
@@ -20,7 +20,7 @@
     echo "<br>";echo "<br>";
     ##############################################################
    
-    echo "<h2> Increaser Counter </h3>";
+    echo "<h3> Increaser Counter </h3>";
     for ($x = 0 ; $x <= 10; ++$x){
         echo "The number is: $x  <br>";
     }
@@ -31,7 +31,7 @@
 
     echo "<br>";echo "<br>";
     ##############################################################
-    echo "<h2> Decreaser Counter </h3>";
+    echo "<h3> Decreaser Counter </h3>";
     for ($i = 10; $i >= 0; $i--){
         echo "The number is: $i <br>";
     }
@@ -48,7 +48,7 @@
     echo "<br>";echo "<br>";
     ##############################################################
 
-    echo "<h2> The PHP continue Statement </h3>";
+    echo "<h3> The PHP continue Statement </h3>";
     for ($i = 0; $i <= 10; $i++){
         if ($i == 5) continue;      // number 5 is skip
         echo "The number is: $i <br>";
